@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mysql-pvc
+  namespace: <YOUR_PROJECT>
+  labels:
+    app: lab2
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 20Gi
+　storageClassName: <YOUR_STORAGECLASS_NAME>
+

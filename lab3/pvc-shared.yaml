@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: shared-pvc
+  namespace: <YOUR_PROJECT>
+  labels:
+    app: lab3
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 10Gi
+　storageClassName: <YOUR_STORAGECLASS_NAME>
+

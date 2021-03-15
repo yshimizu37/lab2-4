@@ -1,0 +1,12 @@
+apiVersion: autoscaling.openshift.io/v1
+kind: ClusterAutoscaler
+metadata:
+  name: cluster-auto-scaler
+spec:
+  resourceLimits:
+    maxNodesTotal: <MAX_NODES>
+  scaleDown:
+    delyAfterAdd: 10s
+    delyAfterDelete: 10s
+    delyAfterFailure: 10s
+    enabled: true

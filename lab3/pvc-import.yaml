@@ -1,0 +1,11 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: vm-volume
+  labels:
+    app: lab3
+  namespace: <YOUR_PROJECT>
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: <YOUR_STORAGECLASS_NAME>

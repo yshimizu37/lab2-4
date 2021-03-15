@@ -1,0 +1,15 @@
+iapiVersion: v1
+kind: Service
+metadata:
+  name: wordpress-service
+  namespace: <YOUR_NAMESPACE>
+  labels:
+    app: lab2
+spec:
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  selector:
+    app: lab2
+    tier: frontend
