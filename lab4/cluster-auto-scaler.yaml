@@ -1,7 +1,7 @@
 apiVersion: autoscaling.openshift.io/v1
 kind: ClusterAutoscaler
 metadata:
-  name: cluster-auto-scaler
+  name: default
 spec:
   resourceLimits:
     maxNodesTotal: <MAX_NODES>
